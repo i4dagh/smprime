@@ -1,0 +1,3 @@
+# smprime itself needs nothing outside the standard library.
+# matplotlib is used by scripts/figure_products.py and by nothing else.
+matplotlib>=3.5

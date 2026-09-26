@@ -1,0 +1,34 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite both the software and the paper."
+title: "smprime: the prime structure of stable-matching instances"
+abstract: >-
+  Two independent implementations of serial deferred acceptance, the blocks
+  and the unique finest partition they generate, the exact census of prime
+  instances, and the verification suite for the accompanying paper.
+type: software
+authors:
+  - family-names: Ishida
+    given-names: Yoshiteru
+    orcid: "https://orcid.org/0000-0003-1641-5385"
+    affiliation: "Toyohashi University of Technology"
+    email: ishida@cs.tut.ac.jp
+version: 1.0.0
+date-released: "2026-09-26"
+license: MIT
+keywords:
+  - stable marriage problem
+  - deferred acceptance
+  - antimatroid
+  - unique factorisation
+  - exact enumeration
+repository-code: "https://github.com/REPLACE-ME/smprime"
+preferred-citation:
+  type: article
+  title: "Prime factorisation of stable-matching instances: uniqueness, simultaneous products, and an exact census"
+  authors:
+    - family-names: Ishida
+      given-names: Yoshiteru
+      orcid: "https://orcid.org/0000-0003-1641-5385"
+  year: 2026
+  journal: "arXiv preprint"
+  notes: "arXiv identifier to be inserted once posted"

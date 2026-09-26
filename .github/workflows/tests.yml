@@ -1,0 +1,21 @@
+name: tests
+
+on: [push, pull_request]
+
+jobs:
+  claims:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.9", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: the claims, as assertions
+        run: python tests/test_claims.py
+      - name: the paper's numbers, exhaustively
+        run: python scripts/verify_paper.py --all
+      - name: the two implementations, compared
+        run: python scripts/crosscheck.py 4 500

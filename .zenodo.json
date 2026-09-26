@@ -1,0 +1,26 @@
+{
+  "title": "smprime: the prime structure of stable-matching instances",
+  "description": "<p>Code and data for <em>Prime factorisation of stable-matching instances: uniqueness, simultaneous products, and an exact census</em>.</p><p>Two independent implementations of serial deferred acceptance built from the definitions, the blocks and the unique finest partition they generate, the exact census of prime instances in exact integer arithmetic, and a verification suite that re-derives every checkable number of the paper and prints PASS or FAIL. Includes a dataset of all 46,656 size-three instances with their invariants.</p><p>Scope: strict and complete preference lists on both sides, equal numbers of proposers and receivers, and a serial scheduler. Nothing here applies to ties, synchronous updates, many-to-one markets or matching with contracts.</p>",
+  "creators": [
+    {
+      "name": "Ishida, Yoshiteru",
+      "affiliation": "Toyohashi University of Technology",
+      "orcid": "0000-0003-1641-5385"
+    }
+  ],
+  "license": "MIT",
+  "upload_type": "software",
+  "access_right": "open",
+  "version": "1.0.0",
+  "language": "eng",
+  "keywords": [
+    "stable marriage problem",
+    "deferred acceptance",
+    "Gale-Shapley",
+    "antimatroid",
+    "unique factorisation",
+    "prime decomposition",
+    "exact enumeration",
+    "combinatorics"
+  ]
+}
