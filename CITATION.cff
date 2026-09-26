@@ -21,7 +21,7 @@ keywords:
   - antimatroid
   - unique factorisation
   - exact enumeration
-repository-code: "https://github.com/REPLACE-ME/smprime"
+repository-code: "https://github.com/i4dagh/smprime"
 preferred-citation:
   type: article
   title: "Prime factorisation of stable-matching instances: uniqueness, simultaneous products, and an exact census"

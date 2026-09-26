@@ -24,7 +24,7 @@ library. `matplotlib` is needed for the one figure script and for nothing
 else.
 
 ```bash
-git clone https://github.com/<user>/smprime
+git clone https://github.com/i4dagh/smprime
 cd smprime
 python tests/test_claims.py        # about ten seconds
 ```
