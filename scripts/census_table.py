@@ -26,7 +26,7 @@ for r in rows:
 print("\nthe decomposable fraction is asymptotically n!/n^(2n)")
 out = os.path.join(HERE, "data", "census.csv")
 os.makedirs(os.path.dirname(out), exist_ok=True)
-with open(out, "w", newline="") as fh:
+with open(out, "w", newline="", encoding="utf-8") as fh:
     w = csv.writer(fh)
     w.writerow(["n", "instances", "decomposable", "prime", "fraction"])
     for r in rows:

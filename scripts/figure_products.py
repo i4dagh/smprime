@@ -135,9 +135,9 @@ def panel_instance(ax):
     for p in range(n):
         ax.text(-1.05, -p, "p%d" % (p + 1), ha="center", va="center",
                 fontsize=6.4, color=BLUE)
-    ax.text(1.0, -5.05, "I₁", ha="center", va="center", fontsize=8.0,
+    ax.text(1.0, -5.05, "I\u2081", ha="center", va="center", fontsize=8.0,
             color=BLUE, fontweight="bold")
-    ax.text(3.5, -5.05, "I₂", ha="center", va="center", fontsize=8.0,
+    ax.text(3.5, -5.05, "I\u2082", ha="center", va="center", fontsize=8.0,
             color=ORANGE, fontweight="bold")
     ax.set_xlim(-1.9, 4.9)
     ax.set_ylim(-5.7, 1.9)
@@ -151,10 +151,10 @@ def panel_instance(ax):
 # ------------------------------------------------------------------- panel (b)
 def panel_factors(ax, g1, g2, pos1, pos2):
     draw_graph(ax, g1, pos1, 1.00, 0.62, 0.0, 0.0, BLUE, 0.09, 0.8, 0.055)
-    ax.text(2.0, -1.45, "G(I₁)   N = 10, E = 15, Q* = 4",
+    ax.text(2.0, -1.45, "G(I\u2081)   N = 10, E = 15, Q* = 4",
             ha="center", va="center", fontsize=6.4, color=BLUE)
     draw_graph(ax, g2, pos2, 1.00, 0.62, 6.0, 0.0, ORANGE, 0.09, 0.8, 0.055)
-    ax.text(7.0, -1.45, "G(I₂)   N = 4, E = 4, Q* = 2",
+    ax.text(7.0, -1.45, "G(I\u2082)   N = 4, E = 4, Q* = 2",
             ha="center", va="center", fontsize=6.4, color=ORANGE)
     ax.add_patch(Rectangle((4.95, -0.20), 0.40, 0.40, facecolor="none",
                            edgecolor=INK2, linewidth=1.0, zorder=5))
@@ -189,7 +189,7 @@ def panel_stable(ax, st1, st2, st):
                                      (-0.55 + 0.42, 1.15 - 1.0 * i),
                                      arrowstyle="-", linewidth=0.7,
                                      color="#c9d3e2", zorder=0))
-    ax.text(1.15, -0.40, "Stab(I) = Stab(I₁) x Stab(I₂),   4 = 2 x 2",
+    ax.text(1.15, -0.40, "Stab(I) = Stab(I\u2081) x Stab(I\u2082),   4 = 2 x 2",
             ha="center", va="center", fontsize=6.4, color=INK2)
     ax.set_xlim(-1.7, 4.0)
     ax.set_ylim(-0.95, 3.35)
@@ -233,7 +233,7 @@ def panel_product(ax, g1, g2, pos1, pos2):
     ys = [place(v, w)[1] for v in g1 for w in g2]
     x0, ytop = min(xs) - 0.30, max(ys) + 0.62
     ax.text(x0, ytop,
-            "G(I) is the Cartesian product of G(I₁) and G(I₂):   "
+            "G(I) is the Cartesian product of G(I\u2081) and G(I\u2082):   "
             "40 states, 100 arcs, six proposals to termination",
             ha="left", va="center", fontsize=7.0, color=INK)
     ax.text(min(xs) - 0.30, max(ys) + 0.28,
@@ -257,7 +257,7 @@ ROWS = [("state count N", "10", "4", "40", "multiplicative"),
 
 def panel_table(ax):
     xs = [0.015, 0.325, 0.435, 0.545, 0.685]
-    head = ["invariant", "I₁", "I₂", "I", "law"]
+    head = ["invariant", "I\u2081", "I\u2082", "I", "law"]
     for x, h in zip(xs, head):
         ax.text(x, 0.93, h, ha="left", va="center", fontsize=6.6,
                 color=INK, fontweight="bold")

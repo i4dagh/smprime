@@ -70,7 +70,7 @@ def main():
     os.makedirs(os.path.dirname(out), exist_ok=True)
     opener = open if plain else gzip.open
     t0, n = time.time(), 0
-    with opener(out, "wt", newline="") as fh:
+    with opener(out, "wt", newline="", encoding="utf-8") as fh:
         w = csv.DictWriter(fh, fieldnames=FIELDS)
         w.writeheader()
         for row in rows():

@@ -1,0 +1,7 @@
+# Keep line endings stable across Windows, macOS and Linux checkouts.
+* text=auto eol=lf
+
+# Binary: never touched by line-ending or encoding conversion.
+*.gz binary
+*.pdf binary
+*.png binary

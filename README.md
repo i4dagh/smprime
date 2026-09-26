@@ -1,11 +1,11 @@
-# smprime — the prime structure of stable-matching instances
+# smprime - the prime structure of stable-matching instances
 
 Serial deferred acceptance, taken apart. An instance of the stable marriage
 problem with strict complete preferences has a unique finest partition of its
 agents into *prime blocks*, and that one partition simultaneously factors
 three things: the digraph of reachable states of the algorithm, the
 antimatroid of feasible proposal prefixes, and the lattice of stable
-matchings. This repository is the code behind that result — two independent
+matchings. This repository is the code behind that result - two independent
 implementations of the algorithm, the partition, the exact census of prime
 instances, and everything needed to check the paper's numbers from scratch.
 
@@ -90,8 +90,8 @@ data/
 | Corollary 5.1, Boolean cubes at n = 3 | `verify_paper.py --all` | 10,368 |
 | Table 3, decomposable at n = 3 | `verify_paper.py --all` | 888 |
 | Theorem 6, uniqueness of the finest partition | `verify_paper.py --all` | checked against the meet of every partition into blocks |
-| Theorem 9, the census | `python scripts/census_table.py` | Π(4) = 109,986,835,968, decomposable 88,478,208 |
-| Theorem 7 and Corollary 7.2, the six composition laws | `verify_paper.py` | 0 failures on random direct sums at sizes 4–6 |
+| Theorem 9, the census | `python scripts/census_table.py` | Pi(4) = 109,986,835,968, decomposable 88,478,208 |
+| Theorem 7 and Corollary 7.2, the six composition laws | `verify_paper.py` | 0 failures on random direct sums at sizes 4-6 |
 | Proposition 12.3, the two families | `verify_paper.py` | same cube execution, stable sets 1 and n |
 | the figure | `python scripts/figure_products.py` | `figures/fig_products.pdf` |
 | the two implementations agree | `python scripts/crosscheck.py` | 0 disagreements on all 46,656 size-three instances |
@@ -109,7 +109,8 @@ sizes of the finest partition, `prime`, and `cube`.
 
 ```python
 import gzip, csv, collections
-rows = list(csv.DictReader(gzip.open("data/size3.csv.gz", "rt")))
+with gzip.open("data/size3.csv.gz", "rt", encoding="utf-8") as fh:
+    rows = list(csv.DictReader(fh))
 collections.Counter(r["parts"] for r in rows)
 # {'3': 45768, '2+1': 504, '1+1+1': 384}
 collections.Counter(r["stab"] for r in rows)
@@ -128,8 +129,8 @@ unbalanced instances. Nothing here applies to ties, to synchronous updates,
 to many-to-one markets or to matching with contracts, and no result should
 be read as if it did.
 
-Sizes: three is enumerable and is enumerated. Four is not — there are
-110,075,314,176 instances — so size-four statements come from closed forms or
+Sizes: three is enumerable and is enumerated. Four is not - there are
+110,075,314,176 instances - so size-four statements come from closed forms or
 from certificates, never from a sweep. Anything obtained by search is
 reported as a bound and labelled as one.
 
