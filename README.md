@@ -15,7 +15,7 @@ without writing any code at all, and `smprime` gives you the state graph, the
 blocks and the invariants of any instance in three lines.
 
 **Paper.** Y. Ishida, *Prime factorisation of stable-matching instances:
-uniqueness, simultaneous products, and an exact census*, arXiv (2026).
+uniqueness, simultaneous products, and an exact census*, arXiv:2610.05617 (2026).
 
 ## Install
 
@@ -75,6 +75,8 @@ scripts/
   census_table.py    prints the census and writes data/census.csv
   size3_dataset.py   writes data/size3.csv.gz
   figure_products.py redraws the paper's figure from the definitions
+  asymptotics.py     the closed forms of Corollary 9.1, checked in exact
+                     integer arithmetic to n = 12
 tests/
   test_claims.py     the claims as assertions
 data/
@@ -95,7 +97,7 @@ data/
 | Proposition 12.3, the two families | `verify_paper.py` | same cube execution, stable sets 1 and n |
 | the figure | `python scripts/figure_products.py` | `figures/fig_products.pdf` |
 | the two implementations agree | `python scripts/crosscheck.py` | 0 disagreements on all 46,656 size-three instances |
-
+| Corollary 9.1, the asymptotic closed forms | `python scripts/asymptotics.py` | `ok` on every row to n = 12 |
 The exhaustive pass takes about a minute; everything else is seconds.
 
 ## The size-three dataset
@@ -151,10 +153,10 @@ release. `CITATION.cff` carries both.
 
 ```
 Ishida, Y. Prime factorisation of stable-matching instances: uniqueness,
-simultaneous products, and an exact census. arXiv (2026).
+simultaneous products, and an exact census. arXiv:2610.05617 (2026).
 ```
 
-Archived release: DOI to be inserted after the first Zenodo deposit.
+Archived release: https://doi.org/10.5281/zenodo.22984730 (concept DOI; always resolves to the newest version).
 
 ## Licence
 
