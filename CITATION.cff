@@ -12,8 +12,8 @@ authors:
     orcid: "https://orcid.org/0000-0003-1641-5385"
     affiliation: "Toyohashi University of Technology"
     email: ishida@cs.tut.ac.jp
-version: 1.0.0
-date-released: "2026-09-26"
+version: 1.1.0
+date-released: "2026-10-08"
 license: MIT
 keywords:
   - stable marriage problem
@@ -22,6 +22,7 @@ keywords:
   - unique factorisation
   - exact enumeration
 repository-code: "https://github.com/i4dagh/smprime"
+doi: "10.5281/zenodo.22984730"
 preferred-citation:
   type: article
   title: "Prime factorisation of stable-matching instances: uniqueness, simultaneous products, and an exact census"
@@ -31,4 +32,4 @@ preferred-citation:
       orcid: "https://orcid.org/0000-0003-1641-5385"
   year: 2026
   journal: "arXiv preprint"
-  notes: "arXiv identifier to be inserted once posted"
+  notes: "arXiv:2610.05617"
